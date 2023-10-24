@@ -189,7 +189,6 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="content-wrapper-link"></a>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4 md-margin-b-4">
@@ -207,7 +206,6 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="content-wrapper-link"></a>
                 </div>
             </div>
             <div class="col-sm-12 col-md-4 md-margin-b-4">
@@ -215,7 +213,7 @@
                     <div class="service-element">
                         <i class="service-icon icon-social-python"></i>
                     </div>
-                    <div class "service-info">
+                    <div class="service-info">
                         <h3>R</h3>
                         <p class="description" style="display: none;">This is my R project. More information will be added later.</p>
                         <div class="progress-box" style="display: none;">
@@ -225,7 +223,6 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="content-wrapper-link"></a>
                 </div>
             </div>
         </div>
@@ -235,46 +232,16 @@
     function toggleDescription(element, lang) {
         const description = element.querySelector('.description');
         const progressBar = element.querySelector('.progress-box');
+        
         if (description.style.display === 'none') {
             description.style.display = 'block';
             progressBar.style.display = 'block';
-            typeWriterEffect(description, lang);
         } else {
             description.style.display = 'none';
             progressBar.style.display = 'none';
-            element.style.backgroundColor = '#e1f1ff';
         }
-    }
-
-    function typeWriterEffect(element, lang) {
-        let text = '';
-        switch (lang) {
-            case 'Experience':
-                text = "I have a wealth of experience in various projects. More information will be added later.";
-                break;
-            case 'SQL':
-                text = "This is my SQL project. More information will be added later.";
-                break;
-            case 'Python':
-                text = "This is my Python project. More information will be added later.";
-                break;
-            case 'R':
-                text = "This is my R project. More information will be added later.";
-                break;
-        }
-        let i = 0;
-        element.innerHTML = '';
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, 25); // Adjust typing speed as needed
-            }
-        }
-        type();
     }
 </script>
-
         <!-- End Experience -->
 
         <!-- Work -->
