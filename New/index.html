@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Prashita Arora
+        </title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+
+        <!-- GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- PAGE LEVEL PLUGIN STYLES -->
+        <link href="css/animate.css" rel="stylesheet">
+
+        <!-- THEME STYLES -->
+        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico"/>
+    </head>
+    <!-- END HEAD -->
+
+    <!-- BODY -->
+    <body id="body" data-spy="scroll" data-target=".header">
+
+<!-- Add this CSS to hide the navigation initially -->
+<style>
+    .navbar {
+      display: none;
+    }
+  
+    .scrolling .navbar {
+      display: block;
+      background-color: white; /* Change to your desired background color */
+    }
+  </style>
+  
+  <!--========== HEADER ==========-->
+  <header class="header navbar-fixed-top" style="background-color: rgba(0, 0, 0, 0.5);">
+      <!-- Navbar -->
+      <nav class="navbar" role="navigation">
+          <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="menu-container js_nav-item">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="toggle-icon"></span>
+                  </button>
+              </div>
+  
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse nav-collapse">
+                  <div class="menu-container">
+                      <ul class="nav navbar-nav navbar-nav-right">
+                          <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a></li>
+                          <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">About</a></li>
+                          <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">Experience</a></li>
+                          <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Work</a></li>
+                          <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <!-- End Navbar Collapse -->
+          </div>
+      </nav>
+      <!-- Navbar -->
+  </header>
+  <!--========== END HEADER ==========-->
+  
+  <!--========== SLIDER ==========-->
+  <div class="promo-block parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/01.jpg">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6">
+                <div class="promo-block-divider">
+                    <h1 class="promo-block-title" style="opacity: 0; transition: opacity 1s ease-in-out;">Prashita<br/> Arora</h1>
+                    <p class="promo-block-text" style="opacity: 0; transition: opacity 1s ease-in-out;">Business Analyst</p>
+                </div>
+                
+                <script>
+                    window.addEventListener("load", function () {
+                        var promoTitles = document.querySelectorAll(".promo-block-title");
+                        var promoTexts = document.querySelectorAll(".promo-block-text");
+                
+                        promoTitles.forEach(function (title) {
+                            title.style.opacity = 1;
+                        });
+                
+                        promoTexts.forEach(function (text) {
+                            text.style.opacity = 1;
+                        });
+                    });
+                </script>
+                
+                <ul class="list-inline">
+                    <li><a href="#" class="social-icons"><i class="icon-social-linkedin"></i></a></li>
+                    <li><a href="https://www.instagram.com/your-instagram-profile" class="social-icons"><i class="icon-social-instagram"></i></a></li>
+                </ul>
+              </div>
+          </div>
+          <!--// end row -->
+      </div>
+  </div>
+  <!--========== SLIDER ==========-->
+  <script>
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 100) { // Adjust the scroll value as needed
+        document.querySelector(".navbar").style.display = "block";
+        document.querySelector(".navbar").style.backgroundColor = "white"; // Change to your desired background color
+      } else {
+        document.querySelector(".navbar").style.display = "none";
+      }
+    });
+  </script>
+
+
+        <!--========== PAGE LAYOUT ==========-->
+        <!-- About -->
+<!-- About -->
+<div id="about">
+    <div class="container content-lg">
+        <div class="row">
+            <div class="text-center sm-text-center">
+                <h2 class="margin-b-0">Intro</h2>
+                <p>What I am all about.</p>
+            <div class="col-md-6 col-sm-12 sm-margin-b-30">
+                <div class="intro-image">
+                    <img src="img/intro_BG.jpg" alt="Intro Image" style="max-width: 100%; opacity: 0.7;">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="margin-b-60">
+                    <p id="intro-text" style="text-align: justify; font-size: 20px;"></p>
+                </div>
+            </div>
+        </div>
+            
+
+    </div>
+</div>
+
+<script>
+    const text = "I'm Prashita Arora, and I'm thrilled to meet you! Originally from India, now in Boston, pursuing my Master's in Business Analytics at Boston University. I love using data for smart decisions. Proficient in SQL, Python, R, and tools like Tableau and PowerBI. Let's connect and create something amazing together!";
+    const textElement = document.getElementById('intro-text');
+    let i = 0;
+
+    function typeText() {
+        if (i < text.length) {
+            textElement.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeText, 25); // Adjust the typing speed (increase the value for slower typing)
+        }
+    }
+
+    typeText();
+</script>
+<!-- End About -->
+
+<!-- Experience -->
+<div id="experience" class="text-center">
+    <div class="container content-lg">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="text-center sm-text-center">
+                    <h2 class="margin-b-0">Experience</h2>
+                    <p>Batman would be jealous.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row row-space-2 margin-b-4">
+            <div class="col-sm-12 col-md-4 md-margin-b-4">
+                <div class="service" data-height="height" onmouseover="toggleDescription(this, 'SQL')" onmouseout="toggleDescription(this, 'SQL')">
+                    <div class="service-element">
+                        <i class="service-icon icon-database"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>SQL</h3>
+                        <p class="description" style="display: none;">This is my SQL project. More information will be added later.</p>
+                        <div class="progress-box" style="display: none;">
+                            <h5>Proficiency <span class="color-heading pull-right" style="color: white;">87%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base-white" role="progressbar" style="width: 87%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="content-wrapper-link"></a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 md-margin-b-4">
+                <div class="service" data-height="height" onmouseover="toggleDescription(this, 'Python')" onmouseout="toggleDescription(this, 'Python')">
+                    <div class="service-element">
+                        <i class="service-icon icon-social-python"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Python</h3>
+                        <p class="description" style="display: none;">This is my Python project. More information will be added later.</p>
+                        <div class="progress-box" style="display: none;">
+                            <h5>Proficiency <span class="color-heading pull-right" style="color: white;">96%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base-white" role="progressbar" style="width: 96%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="content-wrapper-link"></a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 md-margin-b-4">
+                <div class="service" data-height="height" onmouseover="toggleDescription(this, 'R')" onmouseout="toggleDescription(this, 'R')">
+                    <div class="service-element">
+                        <i class="service-icon icon-social-python"></i>
+                    </div>
+                    <div class "service-info">
+                        <h3>R</h3>
+                        <p class="description" style="display: none;">This is my R project. More information will be added later.</p>
+                        <div class="progress-box" style="display: none;">
+                            <h5>Proficiency <span class="color-heading pull-right" style="color: white;">77%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base-white" role="progressbar" style="width: 77%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="content-wrapper-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function toggleDescription(element, lang) {
+        const description = element.querySelector('.description');
+        const progressBar = element.querySelector('.progress-box');
+        if (description.style.display === 'none') {
+            description.style.display = 'block';
+            progressBar.style.display = 'block';
+            typeWriterEffect(description, lang);
+        } else {
+            description.style.display = 'none';
+            progressBar.style.display = 'none';
+            element.style.backgroundColor = '#e1f1ff';
+        }
+    }
+
+    function typeWriterEffect(element, lang) {
+        let text = '';
+        switch (lang) {
+            case 'Experience':
+                text = "I have a wealth of experience in various projects. More information will be added later.";
+                break;
+            case 'SQL':
+                text = "This is my SQL project. More information will be added later.";
+                break;
+            case 'Python':
+                text = "This is my Python project. More information will be added later.";
+                break;
+            case 'R':
+                text = "This is my R project. More information will be added later.";
+                break;
+        }
+        let i = 0;
+        element.innerHTML = '';
+        function type() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, 25); // Adjust typing speed as needed
+            }
+        }
+        type();
+    }
+</script>
+
+        <!-- End Experience -->
+
+        <!-- Work -->
+        <div id="work">
+            <div class="container content-lg">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-center sm-text-center">
+                            <h2 class="margin-b-0">Works</h2>
+                            <p>I build the real value.</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Masonry Grid -->
+                <div class="masonry-grid row row-space-2">
+                    <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
+        
+                    <!-- Work Item 1 -->
+                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-8 margin-b-4">
+                        <div class="work work-popup-trigger" style="position: relative;">
+                            <div class="work-overlay">
+                                <img class="full-width img-responsive" src="img/NY_taxi.jpg" alt="Portfolio Image">
+                            </div>
+                            <div class="work-popup-overlay">
+                                <div class="work-popup-content" style="background-color: white; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
+                                    <a href="javascript:void(0);" class="work-popup-close" style="position: absolute; top: 10px; right: 10px;">Hide</a>
+                                    <div class="margin-b-30">
+                                        <h3 class="margin-b-5">Here it goes</h3>
+                                        <span>Clean &amp; Minimalistic Design</span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                            <div class="margin-t-10 sm-margin-t-0">
+                                                <p>Developed comprehensive regression models for real estate analysis, utilizing R for data visualization, predictive insights, and ML-based missing data imputation. Delivered actionable recommendations for optimizing property investments.</p>
+                                                <ul class="list-inline work-popup-tag">
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Design,</a></li>
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Coding,</a></li>
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Portfolio</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="margin-t-10 sm-margin-t-0">
+                                                <p class="margin-b-5"><strong>Project Leader:</strong> Prashita Arora</p>
+                                                <p class="margin-b-5"><strong>Designer:</strong> Zoey</p>
+                                                <p class="margin-b-5"><strong>Developer:</strong> Mark Doe</p>
+                                                <p class="margin-b-5"><strong>Customer:</strong> Keenthemes</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Work Item 2 -->
+                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-4">
+                        <div class="work work-popup-trigger" style="position: relative;">
+                            <div class="work-overlay">
+                                <img class="full-width img-responsive" src="img/airbnb-logo.jpeg" alt="Portfolio Image">
+                            </div>
+                            <div class="work-popup-overlay">
+                                <div class="work-popup-content" style="background-color: white; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);">
+                                    <a href="javascript:void(0);" class="work-popup-close" style="position: absolute; top: 10px; right: 10px;">Hide</a>
+                                    <div class="margin-b-30">
+                                        <h3 class="margin-b-5">AIRBNB</h3>
+                                        <span>Clean &amp; Minimalistic Design</span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                            <div class="margin-t-10 sm-margin-t-0">
+                                                <p>Leveraged user-based and content-based filtering techniques to create an innovative Airbnb data model for Buenos Aires. Incorporated geotagging, crafted intuitive dashboards, and conducted data visualization using Power BI, enhancing decision- making in the hospitality industry.</p>
+                                                <ul class="list-inline work-popup-tag">
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Design,</a></li>
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Coding,</a></li>
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="#">Portfolio</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="margin-t-10 sm-margin-t-0">
+                                                <p class="margin-b-5"><strong>Project Leader:</strong> John Doe</p>
+                                                <p class="margin-b-5"><strong>Designer:</strong> Alisa Keys</p>
+                                                <p class="margin-b-5"><strong>Developer:</strong> Mark Doe</p>
+                                                <p class="margin-b-5"><strong>Customer:</strong> Keenthemes</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Masonry Grid -->
+            </div>
+        </div>
+        <!-- End Work -->
+            
+        <!-- Contact -->
+        <div id="contact">
+            <div class="bg-color-sky-light">
+                <div class="container content-lg">
+                    <div class="row">
+                        <div class="col-sm-3 sm-margin-b-30 text-right sm-text-center">
+                            <h2 class="margin-b-0">Contacts</h2>
+                            <p>Hire me.</p>
+                        </div>
+                        <div class="col-sm-8 col-sm-offset-1">
+                            <div class="row">
+                                <div class="col-md-3 col-xs-6 md-margin-b-30 col-6">
+                                    <h5>Location</h5>
+                                    <a href="#">Boston, MA</a>
+                                </div>
+                                <div class="col-md-3 col-xs-6 col-6">
+                                    <h5>Email</h5>
+                                    <a href="mailto:#">aroraprash2599@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>>
+        <!-- End Contact -->
+        <!--========== END PAGE LAYOUT ==========-->
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer">
+            <div class="content container">
+                <p class="text-center">
+                    &copy; 2023 Prashita Arora. All Rights Reserved.
+                </p>
+            </div>
+        </footer>
+        <!--========== END FOOTER ==========-->
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">|</a>
+
+        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- CORE PLUGINS -->
+        <script src="vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL PLUGINS -->
+        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
+        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery.parallax.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery.appear.js" type="text/javascript"></script>
+        <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL SCRIPTS -->
+        <script src="js/layout.min.js" type="text/javascript"></script>
+        <script src="js/components/progress-bar.min.js" type="text/javascript"></script>
+        <script src="js/components/masonry.min.js" type="text/javascript"></script>
+        <script src="js/components/wow.min.js" type="text/javascript"></script>
+
+    </body>
+    <!-- END BODY -->
+</html>
